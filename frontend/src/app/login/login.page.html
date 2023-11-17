@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title class="header-title">Bienvenido a StudyApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="login-container">
+    <ion-card class="login-card">
+      <ion-card-header>
+        <ion-card-title class="login-title">Iniciar Sesión</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item lines="full">
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="text" [(ngModel)]="usuario.email"></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="usuario.password"></ion-input>
+        </ion-item>
+        <ion-button expand="full" class="login-button" (click)="loginUser()">Ingresar</ion-button>
+        <ion-button expand="full" fill="clear" class="forgot-password" (click)="showRecoverPasswordModal()">¿Olvidaste tu contraseña?</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

@@ -1,0 +1,77 @@
+/* Colores Personalizados */
+:root {
+  --primary-color: #845EC2;
+  --secondary-color: #2C73D2;
+  --tertiary-color: #0081CF;
+  --quaternary-color: #0089BA;
+  --quinary-color: #008E9B;
+  --senary-color: #008F7A;
+}
+
+/* Estilos Generales */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--quinary-color);
+  color: white;
+}
+
+/* Toolbar Personalizado */
+.custom-toolbar {
+  --background: var(--primary-color);
+}
+
+ion-title {
+  color: white;
+}
+
+/* Estilos de la Tarjeta de Usuario */
+.user-card {
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.user-icon {
+  font-size: 50px;
+  color: var(--tertiary-color);
+}
+
+.user-details {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  color: black;
+}
+
+/* Estilos de Ítems y Etiquetas */
+ion-item {
+  --background: transparent;
+  margin-bottom: 10px;
+}
+
+ion-label {
+  color: var(--primary-color);
+}
+
+/* Botón de Guardado */
+.save-fab {
+  --background: var(--quaternary-color);
+}
+
+ion-fab-button {
+  color: white;
+}
+
+/* Ajustes Adicionales */
+ion-input {
+  color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .user-card, .user-details {
+    margin: 10px;
+    padding: 10px;
+  }
+}

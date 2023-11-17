@@ -1,0 +1,80 @@
+:host {
+    --ion-color-primary: #2C73D2; /* Azul */
+    --ion-color-secondary: #0081CF; /* Azul claro */
+    --ion-color-tertiary: #0089BA; /* Azul cian */
+    --ion-color-quaternary: #008E9B; /* Turquesa */
+    --ion-color-quinary: #008F7A; /* Verde agua */
+    --ion-background-color: #1e1e1e; /* Fondo negro suave para la página completa */
+    --ion-text-color: #ffffff; /* Blanco para texto */
+    --ion-menu-background: #1e1e1e; /* Fondo del menú */
+    --ion-menu-text-color: #ffffff; /* Color de texto del menú */
+  }
+  
+  ion-menu {
+    --background: var(--ion-menu-background);
+  }
+  
+  ion-header {
+    --background: var(--ion-color-primary);
+    --color: var(--ion-text-color);
+  }
+  
+  ion-toolbar {
+    --background: var(--ion-color-primary);
+    --color: var(--ion-text-color);
+  }
+  
+  ion-content {
+    --background: var(--ion-background-color);
+    min-height: 100vh; /* Asegura que ion-content cubra la altura completa de la pantalla */
+  }
+  
+  ion-card {
+    margin: 10px 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  /* Asignar colores de la paleta a las tarjetas */
+  ion-card {
+    --background: var(--ion-color-secondary);
+    &:nth-child(odd) {
+      --background: var(--ion-color-tertiary);
+    }
+    &:nth-child(4n) {
+      --background: var(--ion-color-quaternary);
+    }
+    &:nth-child(3n) {
+      --background: var(--ion-color-quinary);
+    }
+  }
+  
+  ion-card-header, ion-card-content {
+    --color: var(--ion-text-color);
+    text-shadow: 1px 1px 1px #000; /* Efecto de contorno para el texto */
+  }
+  
+  ion-card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .icon-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Estilos para los ítems del menú */
+  ion-list {
+    --background: var(--ion-menu-background);
+  
+    ion-item {
+      --color: var(--ion-menu-text-color);
+      --background-hover: rgba(255, 255, 255, 0.1);
+      font-size: 1.1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      text-shadow: 1px 1px 1px #000; /* Efecto de contorno para el texto */
+    }
+  }

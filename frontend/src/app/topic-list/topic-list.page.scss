@@ -1,0 +1,126 @@
+/* Colores y estilos base */
+:root {
+  --color-primary: #845EC2;
+  --color-secondary: #2C73D2;
+  --color-tertiary: #0081CF;
+  --color-quaternary: #0089BA;
+  --color-quinary: #008E9B;
+  --color-senary: #008F7A;
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
+}
+
+/* Fuente y Fondo General */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--color-quinary);
+  color: #fff;
+}
+
+/* Header y Toolbar */
+ion-header {
+  background-color: var(--color-primary);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+ion-toolbar {
+  --background: var(--color-secondary);
+  transition: background-color var(--transition-speed);
+}
+
+ion-toolbar:hover {
+  --background: darken(var(--color-secondary), 10%);
+}
+
+ion-title {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Botones */
+ion-button {
+  --background: var(--color-tertiary);
+  --border-radius: var(--border-radius);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+ion-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+ion-button[fill="outline"] {
+  --border-color: var(--color-secondary);
+  --color: var(--color-secondary);
+  background-color: transparent;
+}
+
+/* Tarjetas y Contenido */
+ion-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: box-shadow var(--transition-speed);
+}
+
+ion-card:hover {
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+ion-card-header {
+  background-color: var(--color-quaternary);
+  color: white;
+}
+
+/* Íconos y Botones de Acción */
+ion-icon {
+  color: var(--color-senary);
+  transition: transform var(--transition-speed);
+}
+
+ion-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Lista y Elementos */
+ion-list {
+  --background: transparent;
+}
+
+ion-item {
+  --background: transparent;
+  --color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background-color var(--transition-speed);
+}
+
+ion-item:hover {
+  --background: rgba(255, 255, 255, 0.1);
+}
+
+ion-label {
+  transition: color var(--transition-speed);
+}
+
+/* FAB Button Estilizado */
+ion-fab-button {
+  --background: var(--color-tertiary);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+ion-fab-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Animaciones y Efectos Adicionales */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+ion-content {
+  animation: fadeIn 1s ease-in-out;
+}

@@ -1,0 +1,86 @@
+/* Estilos generales */
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f4f4f4; /* Nuevo color de fondo claro y neutro */
+}
+
+ion-header {
+  flex: 0;
+  --background: #1a237e;  /* Asumiendo que deseas un color oscuro para la barra de título */
+}
+
+ion-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --background: #f4f4f4; /* Asegurándose de que el contenido tenga el mismo color de fondo */
+}
+
+.header-title {
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Estilos del card de login */
+.login-card {
+  width: 90%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+  background-color: #ffffff; /* Fondo blanco para la tarjeta de inicio de sesión */
+}
+
+.login-title {
+  text-align: center;
+  font-size: 22px;
+  color: #1a237e;
+}
+
+/* Estilos de los ítems y botones */
+ion-item {
+  --background: #fff;
+  --border-radius: 10px;
+  --border-color: #bdbdbd;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --inner-padding-end: 8px;
+  margin-bottom: 10px;
+}
+
+ion-label {
+  --color: #616161;
+}
+
+ion-input {
+  --placeholder-color: #9e9e9e;
+  --color: #424242;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --inner-padding-end: 8px;
+}
+
+.login-button {
+  --background: #4caf50;
+  --color: white;
+  --border-radius: 10px;
+  margin-top: 15px;
+}
+
+.forgot-password {
+  --color: #9e9e9e;
+  text-decoration: underline;
+  margin-top: 10px;
+}

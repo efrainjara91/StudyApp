@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{accion}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="topic">
+  <ion-card>
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Nombre:</ion-label>
+        <ion-input placeholder="Ingrese el nombre" [(ngModel)]="topic.name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Orden:</ion-label>
+        <ion-input placeholder="Ingrese el orden" [(ngModel)]="topic.order"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Prioridad:</ion-label>
+        <ion-input placeholder="Ingrese prioridad en numeros" [(ngModel)]="topic.priority"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Color:</ion-label>
+        <input type="color" [(ngModel)]="topic.color" />
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="saveTopic()">
+      <ion-icon name="save"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

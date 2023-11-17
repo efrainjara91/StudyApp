@@ -1,0 +1,50 @@
+<ion-menu contentId="main-content" side="start">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item [routerLink]="['/topic-list']">
+        <ion-icon name="list-box" slot="start"></ion-icon>
+        <ion-label>Topicos</ion-label>
+      </ion-item>
+      <ion-item [routerLink]="['/theme-list']">
+        <ion-icon name="albums" slot="start"></ion-icon>
+        <ion-label>Temas</ion-label>
+      </ion-item>
+      <ion-item [routerLink]="['/user-list']">
+        <ion-icon name="people" slot="start"></ion-icon>
+        <ion-label>Usuarios</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<div id="main-content">
+  <ion-router-outlet></ion-router-outlet>
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Study App</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true">
+    <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+    <ion-list>
+      <ion-card *ngFor="let tema of temas">
+        <ion-card-content [routerLink]="['/theme-details', tema.id]">
+          <ion-card-title>{{ tema.name }}</ion-card-title>
+          <p>{{ tema.description }}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </ion-content>
+</div>

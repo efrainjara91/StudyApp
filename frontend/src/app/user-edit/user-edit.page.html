@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="custom-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button [text]="getBackButtonText()" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{accion}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="usuario">
+  <div class="user-card">
+    <ion-icon name="person-circle" class="user-icon"></ion-icon>
+    <div class="user-details">
+      <ion-item>
+        <ion-label>Nombre:</ion-label>
+        <ion-input placeholder="Ingrese el nombre" [(ngModel)]="usuario.name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Apellido:</ion-label>
+        <ion-input placeholder="Ingrese el apellido" [(ngModel)]="usuario.last_name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Email:</ion-label>
+        <ion-input placeholder="Ingrese el email" [(ngModel)]="usuario.email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Contraseña:</ion-label>
+        <ion-input placeholder="Ingrese la contraseña" [(ngModel)]="usuario.password" type="password"></ion-input>
+      </ion-item>
+    </div>
+  </div>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end" class="save-fab">
+    <ion-fab-button (click)="saveUser()">
+      <ion-icon name="save"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
